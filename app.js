@@ -8,4 +8,9 @@ window.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
   });
+
+  // clear textarea
+  const textarea = document.querySelector("textarea");
+  textarea.innerText = '';
 })
+
