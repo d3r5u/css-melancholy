@@ -336,3 +336,8 @@ main h1 {
 .btn:hover {
   cursor: pointer;
 }
+
+
+.hidden {
+  display: none;
+}
