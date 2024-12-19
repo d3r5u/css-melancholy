@@ -1,5 +1,10 @@
 // implement sticky header
 window.addEventListener("DOMContentLoaded", () => {
+  const textarea = document.querySelector("textarea");
+  if (textarea) {
+    textarea.innerText = "";
+  }
+
   const header = document.querySelector("header");
   const goTopArrow = document.querySelector("#go-top");
   window.addEventListener("scroll", () => {
@@ -9,14 +14,17 @@ window.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("sticky");
     }
 
-    if (window.scrollY >= 500) {
-      goTopArrow.classList.remove("hidden");
-    } else if (window.scrollY < 500) {
-      goTopArrow.classList.add("hidden");
+    if (goTopArrow) {
+      if (window.scrollY >= 500) {
+        goTopArrow.classList.remove("hidden");
+      } else if (window.scrollY < 500) {
+        goTopArrow.classList.add("hidden");
+      }
     }
+    goTopArrow.addEventListener("click", (e) => {
+      console.log("go top");
+    });
   });
 
   // clear textarea
-  const textarea = document.querySelector("textarea");
-  textarea.innerText = "";
 });
