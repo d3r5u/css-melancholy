@@ -373,13 +373,20 @@ main h1 {
   }
   .nav-list.open {
     display: block;
+    padding-top: 40px;
   }
   .nav-list a:link {
     font-size: 30px;
   }
+
+  .nav-list.open li,
+  .nav-list.open a:link {
+    display: block;
+    width: 100%;
+  }
   .nav-list a:hover{
-    background-color: transparent;
-    text-decoration: underline;
+    background-color: #444;
+    color: #f2f0c6;
   }
 
   .xizmatlar, .jamoa {
