@@ -22,7 +22,10 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     }
     goTopArrow.addEventListener("click", (e) => {
-      console.log("go top");
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
   });
 
