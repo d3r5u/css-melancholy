@@ -1,5 +1,6 @@
 // implement sticky header
 window.addEventListener("DOMContentLoaded", () => {
+  // clear textarea when page loaded
   const textarea = document.querySelector("textarea");
   if (textarea) {
     textarea.innerText = "";
@@ -29,5 +30,10 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // clear textarea
+  // hamburger btn functionality
+  const hamBtn = document.querySelector(".btn--hamburger");
+  const navList = document.querySelector(".nav-list");
+  hamBtn.addEventListener("click", () => {
+    navList.classList.toggle("open");
+  })
 });

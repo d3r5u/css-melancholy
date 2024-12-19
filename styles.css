@@ -354,8 +354,9 @@ main h1 {
 
   .btn--hamburger {
     display: block;
+    z-index: 9999;
   }
-  
+
   .nav-list {
     position: absolute;
     top: 0;
@@ -369,6 +370,9 @@ main h1 {
     padding-top: 20px;
     z-index: 1000;
     display: none;
+  }
+  .nav-list.open {
+    display: block;
   }
   .nav-list a:link {
     font-size: 30px;
